@@ -60,11 +60,12 @@ public class ClienteDAO {
             
             while(rs.next()){
                 Clientes cliente = new Clientes();
-                cliente.setId(rs.getInt("id"));
+                
                 cliente.setNome(rs.getString("nome"));
                 cliente.setCpf(rs.getInt("cpf"));
                 cliente.setEmail(rs.getString("email"));
                 cliente.setSenha(rs.getString("senha"));
+                cliente.setId(rs.getInt("id"));
                 cliente.setEndereco(rs.getString("endereco"));
                 cliente.setTelefone(rs.getInt("telefone"));
                 clientes.add(cliente);
